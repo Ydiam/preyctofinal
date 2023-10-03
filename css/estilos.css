@@ -2,19 +2,38 @@
 
 
 body{
-    background-color: #D9E4F5;
+   /* background-color: #D9E4F5;*/
+    background-image:url(https://media.istockphoto.com/id/931531050/vector/vector-sketch-iocon-of-meat-and-sausage-products.jpg?s=612x612&w=is&k=20&c=NrZ24c6_wxvQLfP3eL4KSPnOTyb428_jMi1_xRUdbZg=);
 }
 
+
+
+.carrusel{
+    width: 100%;
+    height:600px;
+} 
 
 .navPrincipal{
-    background-color: #54BBDC;
-}
-
-
-.barraPrincipal{
+    background-color: #54BBDC; 
     display: flex;
     justify-content: space-around;
     align-items:center;
+    height: 100px;
+}
+
+/*
+.barraPrincipal{
+    display: flex; 
+    justify-content: space-around;
+    align-items:center;
+}
+*/
+
+.divBarraPrincipal{
+    font-size:x-large;
+    display: flex;
+    justify-content:space-between;
+    
 }
 
 .claseMain{
@@ -53,10 +72,7 @@ body{
 }
 
 .botonEntrar{
-    /*
-    display: flex;
-    align-items:flex-end;
-    */
+   
     background-color: #EE9A6B;
     border-top-left-radius: 15%;
     border-bottom-left-radius: 15%;
@@ -79,8 +95,6 @@ body{
     justify-content: center;
     border-top-left-radius: 20%;
     border-bottom-right-radius: 20%;
-   
-
     
 }
 
@@ -108,12 +122,6 @@ body{
    
 }
 
-/*
-.divInfo1{}
-*/
-
-
-
 
 .divPreguntas{
     background-color: #EE9A6B;
@@ -122,16 +130,19 @@ body{
     align-items: center;
 }
 
+
 .divUnoytres{
     display: flex;
     justify-content: center;
+    
+  
 }
 
 
 .inicioInfo{
 display: flex;
 justify-content: center;
-
+color: blue;
 }
 
 
@@ -148,8 +159,28 @@ justify-content: center;
 footer{
     background-color: #54BBDC;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content:center;
+    align-items:center;
     height: 100px;
-    height: 100px;
+    font-size:x-large;
+   
+
+}
+
+
+.marginFooter{
+   margin-left: 0.3%;
+   margin-right: 0.3%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size:x-large;
+    font-style: italic;
+}
+
+
+.formAction{
+    font-size:x-large;
 }

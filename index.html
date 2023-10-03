@@ -5,25 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda Online</title>
     <link rel="stylesheet" href="./css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<body>
-    <!-- Barra de navegacion principal -->
-   <nav class="navPrincipal">
+<body  >
+
+
+
    
-    <div class="barraPrincipal">
-        <a href="./index.html"><i class="bi bi-house-door"></i></a>
+    <!-- Barra de navegacion principal -->
+
+   <nav class="navPrincipal">
+
+        <a href="./index.html"><i class="bi bi-house-door"> Home</i></a>
         <h1>Nombre de la Tienda</h1>
-        <i class="bi bi-list">Menu</i>
-    </div>
+        <div class="divBarraPrincipal">
+          <i class="bi bi-list">Menu</i>
+          <a href="./Pages/login.html" ><i class="bi bi-person-circle ">Inicio Sesion</i></a>
+        </div>
+         
    </nav> 
-<!-- Seccion galeria de Imagenes -->
+
+<!-- Seccion galeria de Imagenes carusel bustrap -->
+<hr>
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="carrusel" src="https://www.recetasparavivirmejor.com/wp-content/uploads/2021/04/recetasparavivirmejor_arepa_de_carne_carnes_2021-22.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img class="carrusel" src="https://s1.eestatic.com/2020/06/27/como/cocina-trucos-pollo_500960169_154598860_1706x960.jpg" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img class="carrusel" src="https://okdiario.com/img/2014/07/03/receta-de-5-aderezos-rapidos-y-ligeros-para-ensaladas-1.jpg" alt="...">
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<hr>
+
+
+<!-- Seccion galeria de Imagenes 
 <section>
     <img class="ImagenPrincipal" src="https://www.cerveza-artesanal.co/wp-content/uploads/2016/12/receta-carde-res-desmechada-ipa-negra.jpg" alt="">
     <img class="ImagenPrincipal" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt-Sb2cyC7fVXaDw88d6d0LyOOene9xno_3Q&usqp=CAU" alt="">
     <img class="ImagenPrincipal" src="https://www.cerveza-artesanal.co/wp-content/uploads/2016/12/receta-carde-res-desmechada-ipa-negra.jpg" alt="">
     <img class="ImagenPrincipal" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt-Sb2cyC7fVXaDw88d6d0LyOOene9xno_3Q&usqp=CAU" alt="">
-</section>
+    <img class="ImagenPrincipal" src="https://www.cerveza-artesanal.co/wp-content/uploads/2016/12/receta-carde-res-desmechada-ipa-negra.jpg" alt="">
+    <img class="ImagenPrincipal" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt-Sb2cyC7fVXaDw88d6d0LyOOene9xno_3Q&usqp=CAU" alt="">
+
+  </section>
 <hr><br>
+-->
 <!-- Seccion categoria 1 -->
 <section class="categoriaUno">
     <figure>
@@ -88,11 +131,20 @@
 
 <!-- Pie de Pagina -->
    <footer>
-    <p> Redes Sociales // informacion de Contacto </p>
-     
-    <a href="./Pages/Formulario.html">Registrate</a>  //
-    <a href="./Pages/info.html">Informacion</a>
-    
+
+    <i class="bi bi-twitter marginFooter"> Twitter</i> 
+    <i class="bi bi-instagram marginFooter"> Instagram</i>
+    <i class="bi bi-facebook marginFooter"> Facebook</i>
+    <i class="bi bi-whatsapp marginFooter">  Whatsapp</i>
+    <a href="./Pages/login.html" class="marginFooter"><i class="bi bi-person-circle "> login  </i> </a>
+    <a href="./Pages/info.html" class="marginFooter"><i class="bi bi-info-circle"> Informacion </i> </a>
+    <a href="./Pages/Formulario.html " class="marginFooter">Registrate</a> 
+
+
    </footer>
+   
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script src="./index.js"></script>
 </body>
 </html>
