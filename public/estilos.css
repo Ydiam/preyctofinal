@@ -5,7 +5,17 @@ body{
    /* background-color: #D9E4F5;*/
     background-image:url(https://media.istockphoto.com/id/931531050/vector/vector-sketch-iocon-of-meat-and-sausage-products.jpg?s=612x612&w=is&k=20&c=NrZ24c6_wxvQLfP3eL4KSPnOTyb428_jMi1_xRUdbZg=);
 }
-
+.textNavInd{
+  text-align: center;
+}
+.formLogin{
+    background-color: #ece0d9;
+    width: 500px;
+    padding: 3em;
+    border-radius: 1em;
+    margin: auto;
+    margin-top: 7em;
+}
 
 
 .carrusel{

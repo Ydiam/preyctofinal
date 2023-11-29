@@ -1,27 +1,31 @@
-const express = require("express");
-const mongoose = require("mongoose");
-require("dotenv").config();
-const userRoutes = require("./src/routes/user");
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+const path = require('path');
+const hbs = require('hbs');
+const bcrypt = require('bcryptjs');
+require('./dataBase');
+dotenv.config();
+const userRo = require('./routes/userRo');
 
 const app = express();
-const port = process.env.PORT || 9000;
+const PORT = process.env.PORT || 8080;
 
-//middleware
+
+app.use(cors());
 app.use(express.json());
-app.use('/api', userRoutes);
+app.use(express.urlencoded({extended: false}));
+app.use(express.static(path.join(__dirname, 'public')));
+app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, '/views'));
+hbs.registerPartials(path.join(__dirname, '/views/partials'))
 
+app.use('/user', userRo);
+app.get('/', (req,res) => {
+    res.render('index');
+    
+})
 
-
-//routes
-app.get("/", (req, res) => {
-    res.send("Welcome to my ecommerce");
+app.listen(3000, (req, res) => {
+   console.log('App corriendo en el puerto' + PORT);
 });
-
-//mongodb connection
-mongoose
-.connect(process.env.MONGOBD_URI)
-.then(() => console.log("Connected to MongoDB Atlas"))
-.catch((error) => console.error(error));
-
-
-app.listen(port, () => console.log("serer listening on port", port));
