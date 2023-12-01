@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { check } = require('express-validator');
-const registrarUsuario = require("../controllers/usuarioControllers");
+const {registrarUsuario, verificarUsurio }= require("../controllers/usuarioControllers");
 
 router.post('/registrarUsuario',[
     check('nombre').isLength({min:4}),
@@ -9,9 +9,15 @@ router.post('/registrarUsuario',[
     check('password').isLength({min:4}),
     check('email').isLength({min:4}),
 ], registrarUsuario);
-router.get('/form', (req, res) => {
-   res.render('formulario');
-})
+router.post('/login', verificarUsurio );
+
+router.get('/form', (req, res) =>{
+    res.render('formu');
+});
+
+router.get('/login', (req, res) =>{
+    res.render('login');
+});
 
 
 

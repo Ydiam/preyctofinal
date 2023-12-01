@@ -3,10 +3,10 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const path = require('path');
 const hbs = require('hbs');
-const bcrypt = require('bcryptjs');
 require('./dataBase');
 dotenv.config();
 const userRo = require('./routes/userRo');
+const viewsRo = require('./routes/viewRo');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -21,6 +21,7 @@ app.set('views', path.join(__dirname, '/views'));
 hbs.registerPartials(path.join(__dirname, '/views/partials'))
 
 app.use('/user', userRo);
+app.use('/views', viewsRo);
 app.get('/', (req,res) => {
     res.render('index');
     
